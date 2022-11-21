@@ -4,7 +4,6 @@ require("colors");
 require("dotenv").config();
 const { errorHandler } = require("./middleware/errorMiddleware");
 const connectDB = require("./config/db");
-const PORT = process.env.PORT || 8000;
 
 // Connect to database
 connectDB();
@@ -32,6 +31,8 @@ app.use(express.urlencoded({ extended: false }));
 //     res.status(200).json({ message: "Welcome to the Support Desk API" });
 //   });
 // }
+
+const PORT = process.env.PORT || 8000;
 
 app.use(errorHandler);
 
