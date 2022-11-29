@@ -37,4 +37,4 @@ const PORT = process.env.PORT || 8000;
 
 app.use(errorHandler);
 
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`.blue.bold));
